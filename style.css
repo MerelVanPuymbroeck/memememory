@@ -1,0 +1,99 @@
+h1 {
+    font-size: 22pt;
+    text-align: center;
+    color: black;
+    font-family: 'Playfair Display', serif;
+    padding: 5pt;
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 20px 0;
+  background-image: url("achtergrond.jpg");
+  background-size: cover;
+}
+
+.grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.card {
+  position: relative;
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  margin: 5px;
+  box-shadow: 7px 7px 8px grey;
+}
+
+.card,
+.back,
+.front {
+  height: 100px;
+  width: 100px;
+}
+
+.back,
+.front {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.front {
+  background: #FAB942;
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.match .front {
+  background: black !important;
+}
+
+hr {
+    width: 50%;
+    border-bottom:1px solid #000;
+}
+
+#victory {
+  margin-top: 10%;
+  height: 500px;
+  width: 750px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: #04d99d;
+  font-size: 120px;
+  text-align: center;
+  display: none;
+  font-family: 'Anton', sans-serif;
+}
